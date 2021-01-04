@@ -1,0 +1,2 @@
+#creating environment name
+---->conda create --name (environment name) django
