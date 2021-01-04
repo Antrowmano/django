@@ -1,0 +1,2 @@
+#creating app
+ python manage.py startapp (appname)
