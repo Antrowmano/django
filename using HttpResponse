@@ -1,0 +1,15 @@
+#inside the app 
+---->views.py
+	from django.http import HttpResponse
+        def employee(request):
+    return HttpResponse("hey this is antrow")
+#inside the project
+---->settings.py
+	INSTALLED_APP=[my appname]
+---->urls.py
+	from (my app name) import (views)
+        urlpatterns = [path('any name',views.employee,name='employee')]
+#nxt open terminal
+  python manage.py runserver
+#using this http in chrome 
+  http://127.0.01:8000/(any name)
