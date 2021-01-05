@@ -1,0 +1,31 @@
+#url mapping
+ main urls and sub urls
+#first create app
+---->python manage.py startapp (app name)
+#inside the project
+  settings.py --->config this files 
+#creating new sub urls.py file on newapp
+---->create new file name using (urls.py)
+#then create view.py
+  then using httpresponse
+---->from django.http import HttpResponse 
+     def employee2(request):
+         return HttpResponse('hey this is employee2')
+#before we create one sub urls.py file in newapp inside sub urls.py
+  add headder file first
+---->from django.urls import path
+  then import 
+---->from myapp2 import views
+  and create path
+---->urlpatterns = [path('',views.employee2,name='employee2')]
+#after this open main urls.py
+   add include urls
+---->from django.urls import path,include
+   urlpatterns = [path('admin/', admin.site.urls),
+                  path('c/',include('myapp.urls'))]
+#then start server
+---->python manage.py runserver
+
+   
+   
+ 
