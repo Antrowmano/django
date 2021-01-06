@@ -1,0 +1,28 @@
+#create template and variable declaretion
+#first create one folder in to ptoject
+---->template
+#next inside the folder cteate one file 
+---->temp.html
+#after that inside the file heading and variable
+----><!DOCTYPE html>
+     <html lang="en" dir="ltr">
+     <head>
+     <meta charset="utf-8">
+     <title>hey</title>
+     </head>
+     <body>
+     <h1>about</h1>  ------->heading
+     {{abcd}} ------->variables
+
+     </body>
+     </html>
+#then create views.py 
+----> from django.shortcuts import render
+      def worker(request):
+     a={'abcd':'hey this is antrow'}
+     return render(request,'temp.html',context=a)
+#after that give path to template folder
+---->TEMPLATE_DIR = Path(__file__).joinpath(BASE_DIR,'templates')
+---->TEMPLATES = [{'DIRS': [TEMPLATE_DIR],}]
+#then start server
+---->python manage.py runserver
