@@ -1,3 +1,3 @@
 # django
   #jango using atom
- (microsofe windows OS)
+ ( windows OS)
